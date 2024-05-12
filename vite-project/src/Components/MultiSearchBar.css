@@ -1,0 +1,74 @@
+.multi-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    max-width: 650px;
+    box-shadow: 0 0 5px hsl(0 0% 78%);
+    height: 56px;
+    border-radius:  28px;
+    display: flex;
+    justify-content: center;
+    font-size: 0.6rem;
+    position: relative;
+    margin: 30px auto 45px auto;
+    overflow: hidden;
+
+}
+
+
+.multi-search div{
+    border-radius: inherit;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;   
+}
+.multi-search>div p{
+    font-size: 13px;
+} 
+
+.location{
+    width: 34%;
+    padding-left: 4%;
+}
+.check-in, .check-out{
+    width: 18%;
+    padding-left: 4%;
+}
+.who {
+    width: 30%;
+    padding-left: 4%;
+}
+
+.multi-search div:hover{
+    background-color: rgb(204, 203, 203);
+    transition: 0.2s ease;
+}
+.multi-search>div:hover input{
+    background-color: rgb(204, 203, 203);
+    transition: 0.2s ease;
+}
+
+.multi-search>div input:focus{
+    outline: none;
+}
+.search-icon{
+    position: absolute;
+    right: 0%;
+}
+.search{
+    font-size: 52px;
+    color: blue;
+    
+}
+.search-border{
+    width: 0.5px;
+    background-color: #eae8e8;
+    height: 80%;
+}
+.multi-search:hover .search-border {
+    display: none;
+}

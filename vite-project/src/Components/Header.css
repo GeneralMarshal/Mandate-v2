@@ -1,0 +1,42 @@
+header{
+    padding:18px;
+}
+.logo{
+    height:40px;
+}
+.login-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+}
+.user-login{
+    display: flex;
+    height: 40px;
+    position: relative;
+}
+.host-btn{
+    width: 140px;
+    border-radius: 50px;
+    background: linear-gradient(#0066FF,#007BE5,#0E3FF2);
+    color: white;
+}
+.login-btn{
+    width: 82px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.host-btn{
+    margin-right: 5px;
+    position: relative;
+}
+
+.profile{
+    font-size: 25px;
+    margin:5px;
+}
+

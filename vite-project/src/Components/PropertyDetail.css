@@ -1,0 +1,130 @@
+.property-container{
+    width: 250px;
+    cursor: pointer;
+    margin: 40px 10px;
+}
+.property-container:hover .img-btn{
+    visibility: visible;
+    opacity: 1;
+}
+.adjustable-container{
+    justify-self: center;
+}
+.image-container{
+    display: flex;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+.property-image{
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    transition: 0.4s ease;
+    
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    line-height: 19px;
+    padding-top:10px ;
+}
+.property-ratings{
+    display: flex;
+    align-items: start;
+}
+.property-ratings img{
+    margin: 0 5px;
+    height: 15px;
+}
+.property-ratings h5{
+    font-weight: 200;
+}
+.details h5 span{
+    font-weight: 200;
+}
+.details p{
+    color: #717171;
+}
+.heart-property{
+    z-index: 2;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    right : 10px;
+    cursor: pointer;
+}
+.img-btn{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    justify-content: space-between;
+    display: flex;
+    visibility: hidden;
+    transition:0.2s ease;
+    opacity: 0;
+}
+.img-btn button{
+    height: 25px;
+    width: 25px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    background-color: rgba(230, 227, 227, 0.8);
+    cursor: pointer;
+    display: flex;
+}
+.img-nav{
+    font-size: 18px;
+}
+.dotsContainer{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+   
+}
+.dots{
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: #b6b3b3;
+    
+}
+.dots.active{
+    background-color: #ffff;
+    height: 7px;
+    width: 7px;
+}
+
+/* @media screen and (max-width:600px) {
+   .adjustablecontainer{
+    min-width:100%; max-width:100%;
+   }
+}
+@media screen and (min-width:601px) and ( max-width:900px) {
+    .adjustablecontainer {
+            min-width:50%; max-width:50%;
+    }
+    
+}
+@media screen and (min-width:901px) and (max-width:1080px) {
+    .adjustablecontainer {
+        min-width: 33%;
+        max-width: 33%;
+    }
+
+}
+@media screen and (min-width: 1081px) {
+    .adjustablecontainer {
+            min-width:25%; max-width:25%;
+        }
+} */

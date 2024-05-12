@@ -1,0 +1,23 @@
+.drop-down{
+    list-style: none;
+    box-shadow: 0px 0px 2px rgb(186, 184, 184);
+    border-radius: 15px;
+    padding: 20px;
+    width: 200px;
+}
+.drop-down li{
+    font-size: 17px;
+    font-weight: 400;
+    padding: 10px 0;
+}
+.drop-down li.sign-up{
+    font-weight: 700;
+}
+.drop-down-container{
+    position: absolute;
+    right: 0%;
+    top:100%;
+    margin: 10px 0;
+    z-index: 10;
+    background-color: white;
+}

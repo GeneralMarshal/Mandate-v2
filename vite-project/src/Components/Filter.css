@@ -1,0 +1,25 @@
+.filter-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+}
+.filter-container img{
+    height: 20px;
+}
+.more-filters{
+    display: flex;
+    align-items: center;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: space-around;
+    font-weight: 700;
+}
+.filter-container div:hover{
+    cursor: pointer;
+}
