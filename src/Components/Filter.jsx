@@ -1,4 +1,4 @@
-import "./Filter.css";
+import "../Styles/Filter.css";
 
 export default function Filter() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Pagination.css";
+import "../Styles/Pagination.css";
 export default function Pagination(props) {
   let pages = [];
   for (let i = 1; i <= props.noOfPages; i++) {
@@ -19,7 +19,7 @@ export default function Pagination(props) {
             {pages.map((nav) => (
               <button
                 className={`page-nav ${
-                  nav === props.currentPage ? "active" : ""
+                  nav === props.currentPage ? "activePage" : ""
                 }`}
                 onClick={(e) => {
                   props.clickHandler(e);

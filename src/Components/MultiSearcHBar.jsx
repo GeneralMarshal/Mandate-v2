@@ -1,4 +1,4 @@
-import "./MultiSearchBar.css"
+import "../Styles/MultiSearchBar.css"
 
 import { IoSearchCircle } from "react-icons/io5";
 export default function MultiSearchBar(){

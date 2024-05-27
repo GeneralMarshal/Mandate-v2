@@ -1,7 +1,7 @@
-import PropertyDetail from "./PropertyDetail";
+import PropertyDetail from "./PropertyDetail.jsx";
 import { useState } from "react";
 import Pagination from "./Pagination.jsx";
-import "./Main.css";
+import "../Styles/Main.css";
 import { useEffect } from "react";
 
 export default function Main() {

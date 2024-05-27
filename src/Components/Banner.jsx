@@ -1,6 +1,4 @@
-import "./Banner.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {} from "@fortawesome/free-solid-svg-icons";
+import "../Styles/Banner.css";
 import { CiBookmarkCheck } from "react-icons/ci";
 import { FaLaptop } from "react-icons/fa";
 import { IoGiftOutline } from "react-icons/io5";

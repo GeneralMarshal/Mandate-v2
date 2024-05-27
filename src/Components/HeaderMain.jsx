@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MultiSearchBar from "./MultiSearcHBar";
-import "../App.css"; //general style sheet
-import "./Header.css";
+ //general style sheet
+import "../Styles/Header.css";
 import { FaCircleUser } from "react-icons/fa6";
 import { IoIosMenu } from "react-icons/io";
 import LoginDropDown from "./LoginDropDown";

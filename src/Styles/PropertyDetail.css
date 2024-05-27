@@ -52,10 +52,24 @@
     z-index: 2;
     position: absolute;
     height: 20px;
-    width: 20px;
+    width: 24px;
     top: 10px;
     right : 10px;
     cursor: pointer;
+
+}
+.active{
+    visibility: hidden;
+}
+.heart-active{
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    height: 20px;
+    width: 24px;
+    transition: 0.2s ease-in-out;
+    color: rgb(190, 84, 102);
 }
 .img-btn{
     width: 100%;

@@ -1,7 +1,8 @@
-import "./PropertyDetail.css";
+import "../Styles/PropertyDetail.css";
 import { useState } from "react";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { MdOutlineNavigateBefore } from "react-icons/md";
+import { FaHeart } from "react-icons/fa6";
 export default function PropertyDetail() {
   const imageArray = [
     "Assets/propertyImages/01.jpeg",
@@ -20,6 +21,18 @@ export default function PropertyDetail() {
     setCurrentSlide(newIndex);
   }
 
+  function favoritehandler(e){
+    const container = e.currentTarget
+    const active = container.querySelector(".heart-active")
+    const notActive = container.querySelector(".heart-notActive");
+
+    active.classList.toggle("active")
+    notActive.classList.toggle("active");
+
+
+    
+
+  }
   const slider = imageArray.map((image, index) => (
     <img
       key={index}
@@ -44,15 +57,16 @@ export default function PropertyDetail() {
       //   alignItems: "center",
       //   border: "1px black solid",
       // }}
-      //  
+      //
     >
       <div className="property-container">
         <div className="image-container">
           {slider}
           <div className="dotsContainer">{dots}</div>
 
-          <span className="heart-property">
-            <img src="Assets/icons/heart.svg" alt="" />
+          <span className="heart-property" onClick={favoritehandler}>
+            <img src="Assets/icons/heart.svg" alt="" className="heart-notActive" />
+            <FaHeart className="heart-active active"/>
           </span>
           <div className="img-btn">
             <button className="prev-btn" onClick={prevSlide}>
