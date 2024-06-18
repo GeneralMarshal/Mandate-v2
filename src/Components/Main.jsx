@@ -60,12 +60,14 @@ export default function Main() {
   // const[currentArray, setCurrentArray] = useState()
 
   function clickHandler(e) {
+    e.preventDefault()
     setCurrentpage(e.target.value);
     let removeClassList = document.querySelectorAll(".page-nav");
     removeClassList.forEach((page) => {
-      page.classList.remove("active");
+      page.classList.remove("activePage");
     });
-    e.target.classList.add("active");
+    e.target.classList.add("activePage");
+    window.scrollTo({top: 0, behavior: "smooth"})
   }
 
   useEffect(() => {
@@ -77,10 +79,12 @@ export default function Main() {
     currentPage < noOfPages
       ? setCurrentpage(currentPage + 1)
       : setCurrentpage(1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
   }
   function prevHandler() {
     console.log(noOfPages);
     currentPage > 1 ? setCurrentpage( currentPage - 1) : setCurrentpage( noOfPages)
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   return (

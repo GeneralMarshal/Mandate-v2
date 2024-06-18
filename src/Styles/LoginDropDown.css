@@ -8,7 +8,7 @@
 .drop-down li{
     font-size: 17px;
     font-weight: 400;
-    padding: 10px 0;
+    padding: 10px 0 10px 5px ;
 }
 .drop-down li.sign-up{
     font-weight: 700;
@@ -20,4 +20,9 @@
     margin: 10px 0;
     z-index: 10;
     background-color: white;
+}
+.drop-down li:hover{
+    cursor: pointer;
+    background-color: #E6F0FF;
+    border-radius: 5px;
 }

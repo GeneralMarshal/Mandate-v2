@@ -11,7 +11,7 @@ import HeaderMain from "../Components/HeaderMain.jsx";
 export default function LandingPage() {
   return (
     <>
-      <HeaderMain />
+      <HeaderMain search={true} />
       <Banner />
       <Filter />
       <Main />

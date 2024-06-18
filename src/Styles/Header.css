@@ -1,5 +1,6 @@
 header{
-    padding:18px;
+    padding:18px 18px 30px 18px;
+    border-bottom: 2px solid rgba(233, 233, 233, 1);
 }
 .logo{
     height:40px;
@@ -29,6 +30,9 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
+}
+.login-btn:hover{
+    cursor: pointer;
 }
 .host-btn{
     margin-right: 5px;
