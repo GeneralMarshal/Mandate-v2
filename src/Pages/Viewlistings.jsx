@@ -1,12 +1,17 @@
 import HeaderMain from "../Components/HeaderMain"
+import PropertyFeatures from "../Components/PropertyFeatures.jsx";
+import PropertyCheck from "../Components/PropertyCheck.jsx";
 import "../Styles/Viewlistings.css"
+import PropertyAmenities from "../Components/PropertyAmenities.jsx";
 
 
 export default function Viewlistings(){
+   
+   
     return (
       <>
         <HeaderMain search={false} />
-        <main className="view-main px-[100px] py-[30px]">
+        <main className="view-main px-[100px] py-[30px] max-w-[1400px] mx-auto">
           <section className="listings-desc">
             <div className="view-filters flex gap-[50px] mb-[50px]">
               <button className="viewfilter-btn">Photos</button>
@@ -83,9 +88,9 @@ export default function Viewlistings(){
                 </div>
               </div>
             </div>
-            <div>
-              <div className="overview my-[23px] max-w-[644px] ">
-                <div className="summary-card flex w-[100%] flex-row border-[1.5px] border-[#DDDDDD]  border-solid rounded-[8px] h-[95px] items-center justify-between px-[25px] mb-[20px]">
+            <div className="flex flex-wrap justify-between py-[23px] ">
+              <div className="overview  max-w-[700px] ">
+                <div className="summary-card flex-wrap flex w-[100%] flex-row border-[1.5px] border-[#DDDDDD]  border-solid rounded-[8px] h-[95px] items-center justify-between px-[25px] mb-[20px]">
                   <div>
                     <h2 className=" text-[22px] font-[600] mb-[5px]">
                       2 bedroom lekki 1 right side
@@ -106,7 +111,7 @@ export default function Viewlistings(){
                     <h2 className="font-[600] text-[20px] leading-[20px]">
                       132
                     </h2>
-                    <h2 className="text-600 font-12px] underline">Reviews</h2>
+                    <h2 className="text-600 font-[12px] underline">Reviews</h2>
                   </div>
                 </div>
                 <div>
@@ -122,15 +127,27 @@ export default function Viewlistings(){
                   </h1>
                   <img className="" src="Assets/icons/nxt-arrow.svg" alt="" />
                 </div>
-                <div >
+                <div>
                   <h2 className=" mt-[46px] mb-[26px] font-[600] text-[22px]">
                     {" "}
                     Property details
                   </h2>
                   <div className=" flex justify-between">
-                    <div className="property-details"></div>
-                    <div className="property-details"></div>
-                    <div className="property-details"></div>
+                    <PropertyFeatures
+                      icon={"Assets/icons/bed.svg"}
+                      area={"Bedroom Area"}
+                      assets={"2 single beds"}
+                    />
+                    <PropertyFeatures
+                      icon={"Assets/icons/sofa.svg"}
+                      area={"Living Area"}
+                      assets={"1 sofa beds "}
+                    />
+                    <PropertyFeatures
+                      icon={"Assets/icons/sofa.svg"}
+                      area={"Baths"}
+                      assets={"2 bathrooms"}
+                    />
                   </div>
                   <div className="flex my-[12px]">
                     <img
@@ -142,10 +159,12 @@ export default function Viewlistings(){
                       Report this listing
                     </h3>
                   </div>
-                  <div className=" w-[100%] h-[1px] my-[46px] bg-[#DDDDDD]" ></div>
+                  <div className=" w-[100%] h-[1px] my-[46px] bg-[#DDDDDD]"></div>
                 </div>
               </div>
+              <PropertyCheck />
             </div>
+            <PropertyAmenities/>
           </section>
 
           <section className="listings-ratings"></section>

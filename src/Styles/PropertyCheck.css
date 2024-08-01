@@ -1,0 +1,27 @@
+.check-in-out{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px 57px;
+        width: 100%;
+        overflow: hidden;
+        
+}
+.check-in{
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+}
+.check-out{
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+
+}
+.guest-no{
+    grid-column: 1/3;
+    grid-row: 2;
+    width: 100%;
+}
+.reserve-btn{
+    background: linear-gradient(to right, #0066FF, #007BE5, #0E3FF2), radial-gradient(#FFFFFF, #000000);
+}

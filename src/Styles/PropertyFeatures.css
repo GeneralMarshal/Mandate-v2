@@ -1,0 +1,12 @@
+.features img{
+    height: 24px;
+    margin-right: 4px;
+}
+.property-features h1{
+    font-weight: 600;
+    font-size: 16px;
+}
+.property-features h3 {
+    font-weight: 400;
+    font-size: 14px;
+}

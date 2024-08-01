@@ -1,0 +1,9 @@
+.amenities-list{
+    list-style-type: disc;
+  
+}
+.amenities-list li{
+    margin: 10px 40px 20px 0px;
+    width: 200px;
+
+}
