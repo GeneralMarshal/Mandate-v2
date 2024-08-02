@@ -16,7 +16,7 @@ export default function PropertyAmenities(){
             <li>Pack ’n play/Travel crib -available upon request</li>
             <li>Carbon monoxide alarm</li>
           </ul>
-          <button className=" bg-[white] text-[black] border-[1px] rounded-[8px] border-solid px-[23.8px] py-[13.5px] text-[20px] font-[600]">Show all amenitites</button>
+          <button className=" bg-[white] text-[black] border-[1px] rounded-[8px] border-solid px-[23.8px] py-[13.5px] text-[20px] font-[600] mb-[100px]">Show all amenitites</button>
         </div>
       </>
     );

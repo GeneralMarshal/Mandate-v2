@@ -1,7 +1,6 @@
 .footer{
+
     background-color: #F0F0F0;
-    min-height: 376px;
-    width: 100vw;
 }
 .footer li{
     line-height: 30px;
@@ -10,7 +9,7 @@
 .links{
     display: flex;
     flex-wrap: wrap;
-    max-width:700px;
+    width: 100%;
     padding: 50px 100px;
     justify-content: space-between;
     min-height: 307px;

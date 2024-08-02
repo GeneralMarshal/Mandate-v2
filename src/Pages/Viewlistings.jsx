@@ -1,8 +1,12 @@
 import HeaderMain from "../Components/HeaderMain"
+import Footer from "../Components/Footer";
+
 import PropertyFeatures from "../Components/PropertyFeatures.jsx";
 import PropertyCheck from "../Components/PropertyCheck.jsx";
 import "../Styles/Viewlistings.css"
 import PropertyAmenities from "../Components/PropertyAmenities.jsx";
+import PropertyReviews from "../Components/PropertyReviews.jsx";
+
 
 
 export default function Viewlistings(){
@@ -164,11 +168,32 @@ export default function Viewlistings(){
               </div>
               <PropertyCheck />
             </div>
-            <PropertyAmenities/>
+            <PropertyAmenities />
           </section>
 
-          <section className="listings-ratings"></section>
+          <section className="listings-ratings">
+            <div className="property-ratings flex flex-col justify-center items-center h-[250px] border-solid border-[#dddddd] border-y-[2px] mt-[27px] mb-[50px]">
+              <p className="text-[22px] font-[600]">Rating</p>
+              <p className="text-[64px] font-[600]">4.97</p>
+            </div>
+            <div className="property-reviews ">
+              <h1 className="font-[600] text-[36px]">Reviews</h1>
+              <div className="rev-container flex flex-wrap justify-between">
+                <PropertyReviews />
+                <PropertyReviews />
+                <PropertyReviews />
+                <PropertyReviews />
+                <PropertyReviews />
+                <PropertyReviews />
+                <PropertyReviews />
+                <PropertyReviews />
+              </div>
+            </div>
+          </section>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </>
     );
 
