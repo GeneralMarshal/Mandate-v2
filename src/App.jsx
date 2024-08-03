@@ -9,7 +9,7 @@ function App() {
       <div id="maincontainer">
         <Routes>
           <Route path="/" element={<Viewlistings />}></Route>
-          <Route path="Viewlistings" element={<Viewlistings />}></Route>
+          {/* <Route path="Viewlistings" element={<Viewlistings />}></Route> */}
         </Routes>
       </div>
     </div>
