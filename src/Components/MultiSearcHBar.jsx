@@ -12,12 +12,12 @@ export default function MultiSearchBar(){
             <input type="text" placeholder="search destinations" />
           </div>
           <span className="search-border"></span>
-          <div className="check-in">
+          <div className="in-check">
             <p>Check in</p>
             <input type="text" placeholder="Add Dates" />
           </div>
           <span className="search-border"></span>
-          <div className="check-out">
+          <div className="out-check">
             <p>Check out</p>
             <input type="text" placeholder="Add Dates" />
           </div>

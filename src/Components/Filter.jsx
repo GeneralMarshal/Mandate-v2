@@ -3,7 +3,7 @@ import "../Styles/Filter.css";
 export default function Filter() {
   return (
     <>
-      <div className="filter-container">
+      <div className="filter-container flex flex-wrap">
         <div>
           <img src="Assets/filters/Verified.svg" className="filter-icon" />
           <p>Trending</p>
@@ -49,6 +49,7 @@ export default function Filter() {
           <p>More filters</p>
         </div>
       </div>
+      <div className=" w-[100] bg-[#dddddd] h-[1px]"></div>
     </>
   );
 }

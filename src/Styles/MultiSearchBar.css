@@ -31,15 +31,14 @@
 } 
 
 .location{
-    width: 34%;
+    width: 50%;
     padding-left: 4%;
 }
-.check-in, .check-out{
-    width: 18%;
+.in-check, .out-check{
     padding-left: 4%;
 }
 .who {
-    width: 30%;
+    width: 50%;
     padding-left: 4%;
 }
 
