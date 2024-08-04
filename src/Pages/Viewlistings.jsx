@@ -136,7 +136,7 @@ export default function Viewlistings(){
                     {" "}
                     Property details
                   </h2>
-                  <div className=" flex justify-between">
+                  <div className=" flex flex-wrap justify-between">
                     <PropertyFeatures
                       icon={"Assets/icons/bed.svg"}
                       area={"Bedroom Area"}
