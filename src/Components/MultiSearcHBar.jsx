@@ -6,7 +6,7 @@ export default function MultiSearchBar(){
 
     return (
       <>
-        <div className="multi-search">
+        <div className="multi-search ">
           <div className="location">
             <p>Where</p>
             <input type="text" placeholder="search destinations" />

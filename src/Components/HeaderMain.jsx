@@ -27,8 +27,8 @@ export default function HeaderMain(props) {
 
   return (
     <>
-      <header>
-        <div className="login-container ">
+      <header className="h-[200px]">
+        <div className="login-container pb-[20px]">
           <div className="mandate-icon">
             <img
               className="logo"

@@ -44,10 +44,6 @@ export default function Filter() {
           />
           <p>Creative Spaces</p>
         </div>
-        <div className="more-filters">
-          <img src="/Assets/filters/filter-frame.svg " alt="" />
-          <p>More filters</p>
-        </div>
       </div>
       <div className=" w-[100] bg-[#dddddd] h-[1px]"></div>
     </>

@@ -15,7 +15,7 @@ export default function Viewlistings(){
     return (
       <>
         <HeaderMain search={false} />
-        <main className="view-main px-[100px] py-[30px] max-w-[1400px] mx-auto">
+        <main className="view-main px-[20px] md:px-[100px] py-[30px] max-w-[1400px] mx-auto">
           <section className="listings-desc">
             <div className="view-filters flex gap-[50px] mb-[50px]">
               <button className="viewfilter-btn">Photos</button>
@@ -94,7 +94,7 @@ export default function Viewlistings(){
             </div>
             <div className="flex flex-wrap justify-between py-[23px] ">
               <div className="overview  max-w-[700px] ">
-                <div className="summary-card flex-wrap flex w-[100%] flex-row border-[1.5px] border-[#DDDDDD]  border-solid rounded-[8px] h-[95px] items-center justify-between px-[25px] mb-[20px]">
+                <div className="summary-card flex-wrap flex w-[100%]  border-[1.5px] border-[#DDDDDD]  border-solid rounded-[8px] p-[12.5px] items-center justify-between px-[25px] mb-[20px]">
                   <div>
                     <h2 className=" text-[22px] font-[600] mb-[5px]">
                       2 bedroom lekki 1 right side
@@ -136,7 +136,7 @@ export default function Viewlistings(){
                     {" "}
                     Property details
                   </h2>
-                  <div className=" flex flex-wrap justify-between">
+                  <div className="features-card flex flex-wrap justify-center md:justify-between">
                     <PropertyFeatures
                       icon={"Assets/icons/bed.svg"}
                       area={"Bedroom Area"}

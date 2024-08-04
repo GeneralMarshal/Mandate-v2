@@ -8,8 +8,9 @@
     font-family: "Roboto", sans-serif;
     font-size: 12px;
 }
-.filter-container div{
-    margin: 10px;
+.filter-container  div{
+    width: 50px;
+    margin: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,6 +19,7 @@
     height: 20px;
 }
 .more-filters{
+    width: 70px;
     display: flex;
     align-items: center;
     border: 1px solid #DDDDDD;

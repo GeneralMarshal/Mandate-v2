@@ -31,14 +31,15 @@
 } 
 
 .location{
-    width: 50%;
+    width: 40%;
     padding-left: 4%;
 }
 .in-check, .out-check{
     padding-left: 4%;
+    
 }
 .who {
-    width: 50%;
+    width: 40%;
     padding-left: 4%;
 }
 

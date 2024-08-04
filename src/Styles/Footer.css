@@ -137,3 +137,9 @@
 .social img{
     margin: 2px;
 }
+
+@media screen and (max-width:576px) {
+    .links{
+        padding-left: 20px;
+    }
+}

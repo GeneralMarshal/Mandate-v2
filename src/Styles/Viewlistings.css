@@ -45,3 +45,37 @@
     grid-column: 4;
     grid-row: 2;
 }
+
+@media screen and (max-width: 1000px) {
+    .pics-grid {
+        display: grid;
+        grid-template-rows: 200px 200px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .pics-grid {
+        display: grid;
+        grid-template-rows: 150px 150px;
+        gap: 5px;
+    }
+    .summary-card{
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+    .summary-card div{
+        text-align: center;
+        margin: 20px;
+    }
+    .summary-border{
+        display: none;
+    }
+
+}
+@media screen and (max-width: 550px) {
+    .pics-grid {
+        display: grid;
+        grid-template-rows: 100px 100px;
+        gap: 5px;
+    }
+}
