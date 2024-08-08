@@ -9,13 +9,13 @@ export default function PropertyCheck(){
             <span className=" text-[16px] font-[400] mx-[6px]">night</span>
           </h1>
           <div className="check-in-out   border-[1px] border-solid  border-[#B0B0B0] rounded-[6px]">
-            <div className="check-in flex items-center border-r-[1px] pr-[8px] border-solid border-[#B0B0B0]">
-              <label htmlFor="check-in"></label>
-              <input type="date" name="check-in" />
+            <div className="check-in flex items-center border-r-[1px] px-[8px] border-solid border-[#B0B0B0]">
+              <label htmlFor="check-in "></label>
+              <input type="date" name="check-in" className=" text-[15px]" />
             </div>
             <div className="check-out flex justify-center pr-[8px] items-center">
               <label htmlFor="check-in"></label>
-              <input type="date" name="check-in" />
+              <input type="date" name="check-in" className=" text-[15px]" />
             </div>
             <div className="guest-no border-t-[1px] p-[8px] border-solid border-[#B0B0B0]">
               <label htmlFor="" className="block text-[12px]">

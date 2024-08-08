@@ -7,3 +7,10 @@
     width: 200px;
 
 }
+@media screen and (max-width:639px ) {
+    .amenities-list li {
+        margin: 10px 40px 20px 0px;
+        width: 80%;
+    
+    }
+}

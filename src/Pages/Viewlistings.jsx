@@ -14,10 +14,13 @@ export default function Viewlistings(){
    
     return (
       <>
-        <HeaderMain search={false} />
+        <div className=" hidden md:block">
+          <HeaderMain search={false}/>
+        </div>
+
         <main className="view-main px-[20px] md:px-[100px] py-[30px] max-w-[1400px] mx-auto">
           <section className="listings-desc">
-            <div className="view-filters flex gap-[50px] mb-[50px]">
+            <div className="view-filters flex gap-[10px] md:gap-[50px] mb-[20px] md:mb-[30px]">
               <button className="viewfilter-btn">Photos</button>
               <button className="viewfilter-btn">Virtual Tours</button>
               <button className="viewfilter-btn">Map</button>
@@ -92,7 +95,7 @@ export default function Viewlistings(){
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap justify-between py-[23px] ">
+            <div className="flex flex-wrap justify-center  sm:justify-between py-[23px] ">
               <div className="overview  max-w-[700px] ">
                 <div className="summary-card flex-wrap flex w-[100%]  border-[1.5px] border-[#DDDDDD]  border-solid rounded-[8px] p-[12.5px] items-center justify-between px-[25px] mb-[20px]">
                   <div>
