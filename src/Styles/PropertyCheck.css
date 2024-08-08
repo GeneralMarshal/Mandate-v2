@@ -17,6 +17,14 @@
     width: 100%;
 
 }
+.check-in-out label{
+    font-weight: 700;
+    font-size: 12px;
+}
+.check-in-out input {
+    font-weight: 600;
+    font-size: 12px;
+}
 .guest-no{
     grid-column: 1/3;
     grid-row: 2;
