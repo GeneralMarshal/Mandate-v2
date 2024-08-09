@@ -6,6 +6,7 @@ import PropertyCheck from "../Components/PropertyCheck.jsx";
 import "../Styles/Viewlistings.css"
 import PropertyAmenities from "../Components/PropertyAmenities.jsx";
 import PropertyReviews from "../Components/PropertyReviews.jsx";
+import HostDetails from "../Components/HostDetails.jsx";
 
 
 
@@ -15,7 +16,7 @@ export default function Viewlistings(){
     return (
       <>
         <div className=" hidden md:block">
-          <HeaderMain search={false}/>
+          <HeaderMain search={false} />
         </div>
 
         <main className="view-main px-[20px] md:px-[100px] py-[30px] max-w-[1400px] mx-auto">
@@ -192,6 +193,7 @@ export default function Viewlistings(){
                 <PropertyReviews />
               </div>
             </div>
+            <HostDetails />
           </section>
         </main>
         <footer>
