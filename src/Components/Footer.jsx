@@ -1,11 +1,11 @@
 import "../Styles/Footer.css"
 
-export default function Footer(){
+export default function Footer(props){
     return (
       <>
         <div className="footer flex w-[100%] justify-center">
           <div className=" max-w-[1400px] w-[100%]">
-            <div className="links w-[100%] max-w-[800px]">
+            {props.links ?  <div className="links w-[100%] max-w-[800px]">
               <div>
                 <ul>
                   <li>Support</li>
@@ -22,7 +22,8 @@ export default function Footer(){
                   <li>Top deals</li>
                 </ul>
               </div>
-            </div>
+            </div> : ""}
+           
             <div className="footer-foot">
               <div className="copyright-privacy">
                 <p className="copyright">© 2024 Mandates.One</p>

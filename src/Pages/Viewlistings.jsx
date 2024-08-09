@@ -197,7 +197,7 @@ export default function Viewlistings(){
           </section>
         </main>
         <footer>
-          <Footer />
+          <Footer links={true} />
         </footer>
       </>
     );

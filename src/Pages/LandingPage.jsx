@@ -15,7 +15,7 @@ export default function LandingPage() {
       <Banner />
       <Filter />
       <Main />
-      <Footer/> 
+      <Footer links={true} />
     </>
   );
 }
