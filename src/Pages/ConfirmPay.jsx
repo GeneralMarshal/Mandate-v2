@@ -16,7 +16,7 @@ export default function ConfirmPay() {
     <>
       <HeaderMain search={false} />
 
-      <div className="flex flex-wrap justify-center w-[100vw]">
+      <div className="flex flex-wrap justify-center w-[100vw] px-[10px]">
         <div className="max-w-[560px] w-[100%] my-[20px]">
           <div className="flex align-center w-[100%]">
             <span className="flex align-center mr-[15px]">
