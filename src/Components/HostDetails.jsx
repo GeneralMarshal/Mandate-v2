@@ -61,7 +61,7 @@ export default function HostDetails() {
               <p className=" underline"> Show more</p>
             </div>
           </div>
-          <div className="house-rules leading-[36px]">
+          <div className="house-rules leading-[36px] mb-[20px] mr-[20px]">
             <div>
               <p className=" font-[600] text-[16px] mb-[20px] mr-[20px]">
                 Safety & Property
