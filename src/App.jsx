@@ -4,7 +4,7 @@ import Viewlistings from "./Pages/Viewlistings";
 import ConfirmPay from "./Pages/ConfirmPay";
 import { Routes, Route } from "react-router-dom";
 import BookingConfirmation from "./Pages/BookingConfirmation";
-
+import Login from "./Pages/Login";
 function App() {
   return (
     <div id="appdiv">
@@ -14,6 +14,9 @@ function App() {
           <Route path="/" element={<LandingPage />}></Route>
           <Route path="Viewlistings" element={<Viewlistings />}></Route>
           <Route path="Bookingconfirmation" element={<BookingConfirmation />}></Route>
+          <Route path="Bookingconfirmation" element={<BookingConfirmation />}></Route>
+          <Route path="Login" element={<Login/>}></Route>
+
         </Routes>
       </div>
     </div>
