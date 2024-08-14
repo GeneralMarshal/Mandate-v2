@@ -3,7 +3,10 @@ import { useState } from "react";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { MdOutlineNavigateBefore } from "react-icons/md";
 import { FaHeart } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 export default function PropertyDetail() {
+
+  const navigate = useNavigate()
   const imageArray = [
     "Assets/propertyImages/01.jpeg",
     "Assets/propertyImages/02.jpeg",
@@ -38,7 +41,10 @@ export default function PropertyDetail() {
       key={index}
       src={image}
       alt=""
-      className="property-image"
+      className="property-image "
+      onClick={() => {
+        navigate("/Viewlistings");
+      }}
       style={{ transform: `translateX(-${currentSlide * 100}%)` }}
     />
   ));
@@ -64,7 +70,7 @@ export default function PropertyDetail() {
           {slider}
           <div className="dotsContainer">{dots}</div>
 
-          <span className="heart-property" onClick={favoritehandler}>
+          <span className="heart-property z-10" onClick={favoritehandler}>
             <img src="Assets/icons/heart.svg" alt="" className="heart-notActive" />
             <FaHeart className="heart-active active"/>
           </span>
