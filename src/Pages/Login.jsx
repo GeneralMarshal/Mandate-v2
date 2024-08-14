@@ -1,7 +1,51 @@
 import "../Styles/Login.css"
 import Footer from "../Components/Footer.jsx";
+import { useState } from "react";
 
 export default function Login() {
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState("");
+  const [repeat, setRepeat] = useState("");
+  const [firstName, setFirstname] = useState("");
+  const [lastName, setLastname] = useState("");
+
+  const [errors, setErrors] = useState({})
+  function submitHandler(e){
+    e.preventDefault()
+    let errors = {};
+
+    if (!firstName){
+      errors.firstName = "please enter your first name"
+    }
+
+    if (!lastName) {
+      errors.lastName = "please enter your last name";
+    }
+
+    if(!email){
+      errors.email = "please enter your email";
+      
+    }else if(!/\S+@\S+\.\S+/.test(email)){
+      errors.email = "Email address is invalid"
+    }
+
+    if(!password){
+      errors.password = "please enter your password"
+    } else if (password.length < 6){
+      errors.password = "password should be at least 6 characters"
+    }
+    if(!repeat){
+      errors.repeat = "please confirm your password"
+    } else if ( password !== repeat){
+      errors.repeat = "passwords do not match"
+    }
+    
+    setErrors(errors)
+
+  }
+
+
   return (
     <>
       <div>
@@ -31,34 +75,63 @@ export default function Login() {
                     <label htmlFor="firstName " className=" block">
                       First name
                     </label>
-                    <input type="text" placeholder="First name" />
+                    <input
+                      type="text"
+                      placeholder="First name"
+                      onChange={(e) => setFirstname(e.target.value)}
+                    />
+                    <p className="sign-error">{errors.firstName}</p>
                   </div>
                   <div className="flex-1 flex-wrap">
                     <label htmlFor="firstName" className=" block">
-                      First name
+                      Last name
                     </label>
-                    <input type="text" placeholder="First name" />
+                    <input
+                      type="text"
+                      placeholder="First name"
+                      onChange={(e) => setLastname(e.target.value)}
+                    />
+                    <p className="sign-error">{errors.lastName}</p>
                   </div>
                 </div>
                 <div>
                   <label htmlFor="emailAddress" className=" block">
                     Email address
                   </label>
-                  <input type="email" placeholder="Enter your email address" />
+                  <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <p className="sign-error">{errors.email}</p>
                 </div>
                 <div>
                   <label htmlFor="password" className=" block">
                     Password
                   </label>
-                  <input type="password" placeholder="Password" />
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <p className="sign-error">{errors.password}</p>
                 </div>
                 <div>
                   <label htmlFor="repeatPassword" className=" block">
-                    Password
+                    Repeat Password
                   </label>
-                  <input type="password" placeholder="Repeat password" />
+                  <input
+                    type="password"
+                    placeholder="password"
+                    onChange={(e) => setRepeat(e.target.value)}
+                  />
+                  <p className="sign-error">{errors.repeat}</p>
                 </div>
-                <button className="w-[100%] rounded-[8px] h-[57px] mb-[] bg-gradient-to-r from-[#0066FF] via-[#007BE5] to-[#0E3FF2] text-[#ffffff]">
+                <button
+                  className="w-[100%] rounded-[8px] h-[57px] mb-[] bg-gradient-to-r from-[#0066FF] via-[#007BE5] to-[#0E3FF2] text-[#ffffff]"
+                  onClick={(e) => submitHandler(e)}
+                  type="button"
+                >
                   Sign in
                 </button>
               </form>

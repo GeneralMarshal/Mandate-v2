@@ -28,3 +28,10 @@
     left: 50%;
     transform: translateX(-50%);
 }
+.sign-error{
+    color: red;
+    position: absolute;
+    transform: translateY(-25px);
+    font-size: 15px;
+    font-weight: 600;
+}
