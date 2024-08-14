@@ -10,12 +10,12 @@ function App() {
     <div id="appdiv">
       <div id="maincontainer">
         <Routes>
-          <Route path="Confirmpay" element={<ConfirmPay />}></Route>
+          <Route path="/Confirmpay" element={<ConfirmPay />}></Route>
           <Route path="/" element={<LandingPage />}></Route>
-          <Route path="Viewlistings" element={<Viewlistings />}></Route>
-          <Route path="Bookingconfirmation" element={<BookingConfirmation />}></Route>
-          <Route path="Bookingconfirmation" element={<BookingConfirmation />}></Route>
-          <Route path="Login" element={<Login/>}></Route>
+          <Route path="/Viewlistings" element={<Viewlistings />}></Route>
+          <Route path="/Bookingconfirmation" element={<BookingConfirmation />}></Route>
+          <Route path="/Bookingconfirmation" element={<BookingConfirmation />}></Route>
+          <Route path="/Login" element={<Login/>}></Route>
 
         </Routes>
       </div>
