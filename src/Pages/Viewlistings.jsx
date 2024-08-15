@@ -8,10 +8,56 @@ import PropertyAmenities from "../Components/PropertyAmenities.jsx";
 import PropertyReviews from "../Components/PropertyReviews.jsx";
 import HostDetails from "../Components/HostDetails.jsx";
 
+import { useNavigate } from "react-router-dom";
+
+import { useState } from "react";
+
 
 
 export default function Viewlistings(){
    
+    const [checkIn, setCheckIn] = useState("");
+    const [checkOut, setCheckOut] = useState("");
+    const [guests, setGuests] = useState()
+
+    const dateIn = new Date(checkIn);
+    const timeIn =  dateIn.getTime()
+
+    const dateOut = new Date(checkOut);
+    const timeOut = dateOut.getTime();
+
+    const [errors, setErrors] = useState({})
+
+    const navigate = useNavigate()
+    
+
+      function handleCheck(e) {
+
+        e.preventDefault();
+        let errors= {};
+
+        if(!checkIn){
+          errors.checkIn = "required field"
+        } 
+        if (!checkOut) {
+      	  errors.checkOut = "required field";
+
+        }
+        if (!guests) {
+      	  errors.guests = "required field";
+        }
+        if (timeOut < timeIn) {
+          errors.time = "Check-out time should be on or before Check-in time";
+        }
+        setErrors(errors);
+
+        if (Object.keys(errors).length === 0) {
+            navigate("/ConfirmPay");
+        }
+      
+        
+        
+      }
    
     return (
       <>
@@ -170,7 +216,17 @@ export default function Viewlistings(){
                   <div className=" w-[100%] h-[1px] my-[46px] bg-[#DDDDDD]"></div>
                 </div>
               </div>
-              <PropertyCheck />
+              <PropertyCheck
+                checkIn={checkIn}
+                checkOut={checkOut}
+                guests={guests}
+                setCheckIn={setCheckIn}
+                setCheckOut={setCheckOut}
+                setGuests={setGuests}
+                handleCheck={handleCheck}
+                errors={errors}
+                // dateIn={dateIn}
+              />
             </div>
             <PropertyAmenities />
           </section>
