@@ -33,8 +33,12 @@
 }
 
 @media (max-width: 768px){
-    .filter-container{
+.filter-container {
+        display: flex;
+        justify-content: left;
         margin: 20px auto;
-        overflow-x: auto;
+        max-width: 1100px;
+        text-align: center;
+        font-size: 12px;
     }
 }
