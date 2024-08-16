@@ -41,5 +41,6 @@
         text-align: center;
         font-size: 12px;
         overflow: hidden;
+        overflow-x: auto;
     }
 }
