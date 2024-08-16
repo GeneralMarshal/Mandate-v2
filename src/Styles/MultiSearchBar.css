@@ -74,6 +74,9 @@
     display: none;
 }
 @media (max-width:768px) {
+    .multi-search{
+        margin-bottom:0;
+    }
     .location,
     .in-check,
     .out-check,
