@@ -3,7 +3,7 @@ import "../Styles/Filter.css";
 export default function Filter() {
   return (
     <>
-      <div className="filter-container flex justify-start md:center">
+      <div className="filter-container flex justify-start md:justify-center">
         <div>
           <img src="Assets/filters/Verified.svg" className="filter-icon" />
           <p>Trending</p>
