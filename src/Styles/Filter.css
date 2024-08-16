@@ -31,3 +31,10 @@
 .filter-container div:hover{
     cursor: pointer;
 }
+
+@media (max-width: 768px){
+    .filter-container{
+        margin: 20px auto;
+        overflow-x: auto;
+    }
+}

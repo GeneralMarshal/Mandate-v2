@@ -17,7 +17,7 @@
 }
 
 
-.multi-search div{
+.location, .in-check, .out-check, .who{
     border-radius: inherit;
     position: relative;
     height: 100%;
@@ -27,7 +27,8 @@
     overflow: hidden;   
 }
 .multi-search>div p{
-    font-size: 13px;
+    font-size: 14px;
+
 } 
 
 .location{
@@ -71,4 +72,12 @@
 }
 .multi-search:hover .search-border {
     display: none;
+}
+@media (max-width:768px) {
+    .location,
+    .in-check,
+    .out-check,
+    .who, .search-border {
+        display: none;
+    }
 }

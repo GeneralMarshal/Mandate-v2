@@ -11,7 +11,7 @@ export default function Banner() {
   };
   return (
     <>
-      <div className="banner" style={bannerStyle}>
+      <div className="banner hidden md:flex" style={bannerStyle}>
         <div className="banner-heading">
           <h1>Seamless Shortlet Bookings</h1>
         </div>
