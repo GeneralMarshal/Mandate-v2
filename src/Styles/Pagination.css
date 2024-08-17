@@ -1,6 +1,9 @@
 .nav-btn{
     width: 100%;
     text-align: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 .pagination{
     text-align: center;
@@ -21,7 +24,7 @@
 .nav-prev, .nav-next{
     background-color: white;
     display: flex;
-    width: 110px;
+    width: 150px;
     height: 35px;
     justify-content: space-around;
     align-items: center;
