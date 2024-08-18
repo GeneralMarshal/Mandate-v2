@@ -80,7 +80,10 @@
     .location,
     .in-check,
     .out-check,
-    .who, .search-border {
+    .who-p, .who-i, .search-border {
         display: none;
+    }
+    .search-icon{
+        display: flex;
     }
 }
