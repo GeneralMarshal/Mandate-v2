@@ -28,7 +28,7 @@ export default function HeaderMain(props) {
   return (
     <>
       <header className="">
-        <div className="login-container hidden md:flex pb-[0] md:pb-[20px]">
+        <div className="login-container hidden md:flex pb-[0]">
           <div className="mandate-icon">
             <img
               className="logo"
@@ -37,7 +37,7 @@ export default function HeaderMain(props) {
             />
           </div>
           <div className="user-login ">
-            <button className="host-btn ">Become a host</button>
+            {props.hostBtn && <button className="host-btn ">Become a host</button>}
             <div className="login-btn" onClick={() => handleClick()}>
               <FaCircleUser className="profile" />
               <IoIosMenu className="profile" />

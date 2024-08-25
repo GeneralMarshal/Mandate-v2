@@ -1,10 +1,15 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
 import Viewlistings from "./Pages/Viewlistings";
 import ConfirmPay from "./Pages/ConfirmPay";
-import { Routes, Route } from "react-router-dom";
 import BookingConfirmation from "./Pages/BookingConfirmation";
 import Login from "./Pages/Login";
+import HostLogin from "./Pages/HostLogin";
+import HostBio from "./Pages/HostBio";
+import ManageListingsOne from "./Pages/manage-listings/ManageListingsOne";
+import "react-phone-input-2/lib/style.css";
+
 function App() {
   return (
     <div id="appdiv">
@@ -13,11 +18,19 @@ function App() {
           <Route path="/Confirmpay" element={<ConfirmPay />}></Route>
           <Route path="/" element={<LandingPage />}></Route>
           <Route path="/Viewlistings" element={<Viewlistings />}></Route>
-          <Route path="/Bookingconfirmation" element={<BookingConfirmation />}></Route>
-          <Route path="/Bookingconfirmation" element={<BookingConfirmation />}></Route>
-          <Route path="/Login" element={<Login/>}></Route>
-
-        </Routes>
+          <Route
+            path="/Bookingconfirmation"
+            element={<BookingConfirmation />}
+          ></Route>
+          <Route
+            path="/Bookingconfirmation"
+            element={<BookingConfirmation />}
+          ></Route>
+          <Route path="/Login" element={<Login />}></Route>
+          <Route path="/HostLogin" element={<HostLogin />}></Route>
+          <Route path="/Hostbio" element={<HostBio/>}></Route>
+          <Route path="/Managelistingsone" element={<ManageListingsOne/>}> </Route>
+        </Routes>  
       </div>
     </div>
   );

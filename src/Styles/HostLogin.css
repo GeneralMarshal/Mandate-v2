@@ -1,0 +1,23 @@
+.host-login input{
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 400;
+    width: 100%;
+}
+.host-log-soc div{
+    height: 48px;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 24px;
+    justify-content: flex-start;
+    position: relative;
+}
+.host-log-soc div p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

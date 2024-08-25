@@ -1,0 +1,28 @@
+.desc-opt div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.desc-opt img{
+    margin: 6px;
+    width: 30px;
+}
+.desc-opt p{
+    font-weight: 600;
+    font-size: 12px;
+}
+.desc-place input{
+    height: 63px;
+    border-radius:12px;
+    border: 1px solid #BABABA;
+    width: 100%;
+    margin-top:10px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+}
+.desc-place label{
+    font-size: 16px;
+    font-weight: 400;
+    
+}

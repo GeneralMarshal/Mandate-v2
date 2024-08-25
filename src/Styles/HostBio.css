@@ -1,0 +1,18 @@
+.host-sign-in label{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.host-sign-in input[type="text"], input[type="file"]{
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 400;
+    border: 1px solid #E9E9E9;
+    width: 100%;
+    margin-bottom: 24px;
+}
+.agree-check{
+    width: 20px;
+    margin-right: 12px;
+}

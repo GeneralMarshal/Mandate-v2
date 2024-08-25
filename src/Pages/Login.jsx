@@ -63,7 +63,7 @@ export default function Login() {
               Login
             </p>
             <div className="login-form border-solid border-[1px] border-[#B0B0B0] rounded-[12px] px-[32px]">
-              <form action="" className="mandate-login">
+              <form action="" className="mandate-login">  
                 <p className=" py-[21px] text-center font-[700] text-[16px] border-solid border-b-[1px] border-b-[#EBEBEB]">
                   Sign up
                 </p>
