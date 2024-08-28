@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .desc-opt div{
     display: flex;
     flex-direction: column;
@@ -12,7 +15,7 @@
     font-weight: 600;
     font-size: 12px;
 }
-.desc-place input{
+.desc-place input, .little-more input{
     height: 63px;
     border-radius:12px;
     border: 1px solid #BABABA;
@@ -20,9 +23,20 @@
     margin-top:10px;
     margin-bottom: 50px;
     padding-left: 20px;
+    font-size: 20px ;
 }
 .desc-place label{
     font-size: 16px;
     font-weight: 400;
     
+}
+.little-more textarea{
+    height: 169px;
+    border-radius: 12px;
+    border: 1px solid #BABABA;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 20px;
+    font-size: 20px;
 }
