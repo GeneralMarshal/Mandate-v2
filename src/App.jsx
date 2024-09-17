@@ -8,6 +8,10 @@ import Login from "./Pages/Login";
 import HostLogin from "./Pages/HostLogin";
 import HostBio from "./Pages/HostBio";
 import ManageListingsOne from "./Pages/manage-listings/ManageListingsOne";
+import ManageListingsTwo from "./Pages/manage-listings/ManageListingsTwo";
+import ManageListingsThree from "./Pages/manage-listings/ManageListingsThree";
+
+
 import "react-phone-input-2/lib/style.css";
 
 function App() {
@@ -28,9 +32,17 @@ function App() {
           ></Route>
           <Route path="/Login" element={<Login />}></Route>
           <Route path="/HostLogin" element={<HostLogin />}></Route>
-          <Route path="/Hostbio" element={<HostBio/>}></Route>
-          <Route path="/Managelistingsone" element={<ManageListingsOne/>}> </Route>
-        </Routes>  
+          <Route path="/Hostbio" element={<HostBio />}></Route>
+          <Route path="/Managelistingsone" element={<ManageListingsOne />}>
+            {" "}
+          </Route>
+          <Route path="/ManagelistingsTwo" element={<ManageListingsTwo />}>
+            {" "}
+          </Route>
+          <Route path="/ManagelistingsThree" element={<ManageListingsThree />}>
+            {" "}
+          </Route>
+        </Routes>
       </div>
     </div>
   );

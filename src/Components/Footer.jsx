@@ -27,7 +27,7 @@ export default function Footer(props){
             <div className="footer-foot">
               <div className="copyright-privacy">
                 <p className="copyright">© 2024 Mandates.One</p>
-                <p className="privacy-policy">
+                <div className="privacy-policy">
                   {" "}
                   <span>.</span> Privacy <span>.</span> Your Privacy Choices
                   <div className="privacy-icon">
@@ -43,7 +43,7 @@ export default function Footer(props){
                       <img src="./Assets/icons/ex.svg" alt="" className="ex" />
                     </div>
                   </div>
-                </p>
+                </div>
               </div>
               <div className="language-social">
                 <div className="language">

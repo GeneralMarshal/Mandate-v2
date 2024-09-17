@@ -1,6 +1,15 @@
 *{
     box-sizing: border-box;
 }
+.desc-filters{
+    padding: 5px;
+    border-radius: 8px;
+}
+.desc-filters:hover{
+    cursor: pointer;
+    background-color: rgb(241, 242, 246);
+
+}
 .desc-opt div{
     display: flex;
     flex-direction: column;
@@ -15,13 +24,16 @@
     font-weight: 600;
     font-size: 12px;
 }
-.desc-place input, .little-more input{
+.list-input{
+    margin-bottom: 50px;
+}
+.desc-place input, .little-more input, .price-listing input{
     height: 63px;
     border-radius:12px;
     border: 1px solid #BABABA;
     width: 100%;
     margin-top:10px;
-    margin-bottom: 50px;
+    
     padding-left: 20px;
     font-size: 20px ;
 }
@@ -36,7 +48,26 @@
     border: 1px solid #BABABA;
     width: 100%;
     margin-top: 10px;
-    margin-bottom: 50px;
     padding: 20px;
     font-size: 20px;
+}
+.listings-error{
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+}
+.overlay{
+    position: absolute;       
+    top: 0;
+    left: 0;
+    width: 100%;              
+    height: 100%;             
+    background-color: rgba(243, 238, 238, 0.5); 
+    display: flex;             
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;   
+}
+.upload-photos{
+
 }

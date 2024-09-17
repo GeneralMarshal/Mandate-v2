@@ -3,7 +3,7 @@
     font-weight: 500;
     margin-bottom: 5px;
 }
-.host-sign-in input[type="text"], input[type="file"]{
+.host-sign-in input[type="text"],.host-sign-in input[type="file"]{
     padding: 12px;
     font-size: 16px;
     border-radius: 8px;
