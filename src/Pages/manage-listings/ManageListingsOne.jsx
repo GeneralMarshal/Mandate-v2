@@ -5,6 +5,7 @@ import Counter from "../../Components/Counter";
 import { useState } from "react";
 import { db } from "../../Components/Firebase"
 import { collection, addDoc } from "firebase/firestore"; 
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 import Switch from "@mui/material/Switch";
@@ -21,6 +22,7 @@ import FormLabel from "@mui/material/FormLabel";
 // Your web app's Firebase configuration
 
 export default function ManageListingsOne() {
+
   const [country, setCountry] = useState();
   const [state, setState] = useState();
   const [city, setCity] = useState();
@@ -39,6 +41,8 @@ export default function ManageListingsOne() {
   const [formDraft, setFormDraft] = useState([]);
 
   const [error, setError] = useState({});
+
+  const Navigate = useNavigate();
 
   var filters = [
     {
@@ -144,6 +148,11 @@ export default function ManageListingsOne() {
     
 
 
+
+  }
+  function submitHandler(){
+    draftHandler()
+    Navigate("/ManageListingsTwo")
 
   }
 
@@ -269,10 +278,10 @@ export default function ManageListingsOne() {
                     setCode(e.target.value);
                   }}
                 />
-                <p className=" listings-error">{error.city}</p>
+                <p className=" listings-error">{error.code}</p>
               </div>
             </div>
-            <div list-input>
+            <div className="list-input">
               <label htmlFor="address">Street address</label>
 
               <input
@@ -379,7 +388,8 @@ export default function ManageListingsOne() {
             >
               Save and exit
             </button>
-            <button className=" h-[48px] w-[144px] border-solid border-[1px] border-[black] bg-[black] text-[#ffffff] rounded-[8px] font-[600] text-[16px]">
+            <button className=" h-[48px] w-[144px] border-solid border-[1px] border-[black] bg-[black] text-[#ffffff] rounded-[8px] font-[600] text-[16px]"
+            onClick={() => submitHandler()}>
               Next
             </button>
           </div>

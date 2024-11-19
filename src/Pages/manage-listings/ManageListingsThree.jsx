@@ -4,10 +4,74 @@ import Footer from "../../Components/Footer";
 import Counter from "../../Components/Counter"
 
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function ManageListingsThree() {
 
-  const [dayCounter, setDay] = useState()
+  const [dayCounter, setDay] = useState(1)
+  const [errors, setErrors] = useState({})
+  const [ppn, setPpn] = useState('')
+  const [cautionFee, setCautionFee] = useState('')
+  const [percentageDisc, setPercentageDisc] = useState('')
+  const [total, setTotal] = useState('')
+
+  function addBtn(){
+    setDay( (day) => day+=1)
+  }
+  function subBtn() {
+    if (dayCounter > 1){
+      setDay((day) => (day -= 1));
+    }
+  }
+  
+
+  function draftHandler(){
+    const error={}
+    if(!ppn){
+      error.ppn = "Required field"
+    }
+    if(percentageDisc > 100 || percentageDisc < 0){
+      error.percentageDisc = "percentage should be in a range of 0 to 100"
+      alert("percentage should be form 0 to 100")
+      setPercentageDisc(0)
+    }
+    setErrors(error)
+
+    let totalAmount = 0
+
+    const pricePerNight = (parseFloat(ppn)||0)
+    const fee = (parseFloat(cautionFee||0))
+    const discount = (parseFloat(percentageDisc)||0)
+
+    totalAmount += pricePerNight
+    totalAmount += fee
+    totalAmount += discount
+
+      var draft = {
+        "PricePerNight": ppn,
+        "CautionFee": cautionFee,
+        "Promotion Discount": percentageDisc,
+        "Total": total,
+
+      };
+
+
+    setTotal(totalAmount)
+
+        if (!Object.keys(error).length) {
+          var listingsTwo = JSON.parse(
+            localStorage.getItem("mandateOneV2_draft")
+          );
+          var listingsThreeDraft = { ...draft, ...listingsTwo };
+          localStorage.setItem(
+            "mandateOneV2_draft",
+            JSON.stringify(listingsThreeDraft)
+          );
+          console.log(JSON.parse(localStorage.getItem("mandateOneV2_draft")));
+        } else alert("please fill all the required fields");
+
+    
+  }
   return (
     <>
       <HeaderMain />
@@ -30,14 +94,33 @@ export default function ManageListingsThree() {
             How much is your property?
           </h1>
           <div className="price-listing w-full">
-            <div className=" flex w-full gap-[15px] md:gap-[10%]">
+            <div className=" flex w-full gap- [15px] md:gap-[10%]">
               <div className=" flex-1 list-input">
                 <label htmlFor="country">Price per night in NGN</label>
-                <input type="number" placeholder="N" />
+                <input
+                  type="float"
+                  placeholder="N"
+                  onChange={(e) => {
+                    setPpn(e.target.value);
+                  }}
+                  value={ppn || ""}
+                />
+                {errors.ppn ? (
+                  <p className=" listings-error">{errors.ppn}</p>
+                ) : (
+                  ""
+                )}
               </div>
               <div className=" flex-1 list-input">
                 <label htmlFor="state">Caution fee(if applicable)</label>
-                <input type="number" placeholder="N" />
+                <input
+                  type="float"
+                  placeholder="N"
+                  onChange={(e) => {
+                    setCautionFee(e.target.value);
+                  }}
+                  value={cautionFee || ""}
+                />
               </div>
             </div>
           </div>
@@ -47,16 +130,23 @@ export default function ManageListingsThree() {
                 <label htmlFor="country">
                   Promotion discount in percentage (optional)
                 </label>
-                <input type="number" placeholder="%" />
+                <input
+                  type="float"
+                  placeholder="%"
+                  onChange={(e) => {
+                    setPercentageDisc(e.target.value);
+                  }}
+                  value={percentageDisc}
+                />
               </div>
               <div className=" flex-1 list-input">
                 <label htmlFor="country">Minimum number of booking days</label>
 
                 <Counter
-                  count={1}
+                  count={dayCounter}
                   name={"Days"}
-                  // addBtn={addBtn}
-                  // subBtn={subBtn}
+                  addBtn={() => addBtn()}
+                  subBtn={() => subBtn()}
                 />
               </div>
             </div>
@@ -103,7 +193,7 @@ export default function ManageListingsThree() {
           </div>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }

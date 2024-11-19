@@ -3,6 +3,7 @@ import HeaderMain from "../../Components/HeaderMain";
 import Footer from "../../Components/Footer";
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ManageListingsTwo() {
   const [checkedFeatures, setCheckedFeatures] = useState([]);
@@ -12,6 +13,8 @@ export default function ManageListingsTwo() {
   const [isCover, setIsCover] = useState(0)
   const [errors, setErrors] = useState({})
   const [draft, setDraft] = useState()
+
+  const Navigate = useNavigate()
   
   var propertyFeatures = [
     "Wifi",
@@ -139,15 +142,17 @@ export default function ManageListingsTwo() {
 
     if(!Object.keys(error).length){
       var listingsOne = JSON.parse(localStorage.getItem("mandateOneV2_draft"));
-      var listingsTwo = {...listingsOne, ...draft}
-      console.log(listingsTwo)
+      var listingsTwoDraft = {...draft, ...listingsOne}
+      localStorage.setItem("mandateOneV2_draft", JSON.stringify(listingsTwoDraft));
+      console.log(JSON.parse(localStorage.getItem("mandateOneV2_draft")));
     }else(
-      alert("please fill all the reuired fields")
+      alert("please fill all the required fields")
     )
-    
-    
+  }
 
-    
+  function submitHandler(){
+    draftHandler()
+    Navigate("/ManageListingsThree")
   }
 
   return (
@@ -321,7 +326,8 @@ export default function ManageListingsTwo() {
                 <button className=" h-[48px] w-[144px] border-solid border-[1px] border-[black] rounded-[8px] font-[600] text-[16px] " onClick={()=>draftHandler()}>
                   Save and exit
                 </button>
-                <button className=" h-[48px] w-[144px] border-solid border-[1px] border-[black] bg-[black] text-[#ffffff] rounded-[8px] font-[600] text-[16px]">
+                <button className=" h-[48px] w-[144px] border-solid border-[1px] border-[black] bg-[black] text-[#ffffff] rounded-[8px] font-[600] text-[16px]"
+                onClick={()=>submitHandler()}>
                   Next
                 </button>
               </div>
